@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
-gem "sinatra", "1.4.6"
-gem "json", "1.8.3"
+ruby "2.1.5"
+gem "sinatra", "1.1.0"
+gem "json", "1.8.0"
 gem "http"
