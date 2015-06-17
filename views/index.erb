@@ -1,2 +1,6 @@
 <h1>Bienvenido</h1>
 <p>Uso de API de clima</p>
+<% @climas.each do |clima| %>
+	<h2><%= clima['title'] %></h2>
+	<p><%= clima %></p>
+<% end %>
