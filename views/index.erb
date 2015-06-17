@@ -1,6 +1,21 @@
-<h1>Bienvenido</h1>
-<p>Uso de API de clima</p>
-<% @climas.each do |clima| %>
-	<h2><%= clima['title'] %></h2>
-	<p><%= clima %></p>
-<% end %>
+<div class="container">
+	<h1>Uso de API de clima Yahoo</h1>
+	<div class="row">
+		<% @climas.each do |clima| %>
+			<div class="col-md-2">
+					<h3>
+						<a href="<%= clima['link'] %>" target="_blank"><%= clima['title'] %></a>
+					</h3>
+					<p>
+						<strong>Fecha: </strong><%= clima['lastBuildDate'] %>
+
+						<strong>Condiciones</strong>
+						<%= (((clima['item']['condition']['temp']).to_i - 32) / 1.8).to_i %>
+						<article>
+							<%= clima['item']['description'] %>
+						</article>
+					</p>
+			</div>
+		<% end %>
+	</div>
+</div>
